@@ -1,6 +1,18 @@
 # Readme
-This is a temporary repository of the code used to develop the paper.
-contact kpierce@alumni.ubc.ca with any questions.
+This repository contains the stochastic simulation code for ESurf submission "Stochastic description of intermittent transport and aggregate derivation of the bedload flux".
+
+Contact kpierce@alumni.ubc.ca with any questions.
+
+## Contents:
+
+* `figure*i*.ipynb` are jupyter notebooks which make each plot in the paper.
+These notebooks draw upon the code from the `*.py` modules.
+
+* `flipflopanalytical.py` implements the analytical functions derived in the manuscript
+
+* `flipflopinertial.py` conducts monte carlo simulations of individual grains obeying the pair of Langevin equations in the manuscript
+
+* `fluxsim.py` runs an ensemble of monte carlo simulations and counts the rate of particles crossing a control surface in order to compute the flux.
 
 
 ## Description of simulation algorithm
@@ -15,15 +27,4 @@ $$ v(t+\delta t) = v(t) + \sqrt{2\Gamma \delta t} + F(v(t)) \delta t $$
 
 Alternation between these two procedures simulates a single stochastic trajectory. Aggregation of many trajectories produces probability characteristics.
 
-
-## Contents:
-
-* `figure*i*.ipynb` are jupyter notebooks which make each plot in the paper.
-These notebooks draw upon the code from the `*.py` modules.
-
-* `flipflopanalytical.py` implements the analytical functions derived in the manuscript
-
-* `flipflopinertial.py` conducts monte carlo simulations of individual grains obeying the pair of Langevin equations in the manuscript
-
-* `fluxsim.py` runs an ensemble of monte carlo simulations and counts the rate of particles crossing a control surface in order to compute the flux.
 
