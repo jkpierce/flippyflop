@@ -10,8 +10,8 @@ To simulate the mobile-immobile model, a hybrid strategy is used. This alternate
 The probability that a particle deposits in $\delta t$ is $1-\exp[-k_D \delta t]$. Similarly the probability that a particle entrains is $1-\exp[-k_E \delta t]$. The motion-rest switching just compares a random number $r \in [0,1]$ with these probabilities to evaluate whether an event occurs in $\delta t$ or not.
 
 The Euler-Mayarama algorithm 
-$$ x(t+\delta t) &= x(t) + v(t)\delta t $$
-$$ v(t+\delta t) &= v(t) + \sqrt{2\Gamma \delta t} + F(v(t)) \delta t $$
+$$ x(t+\delta t) = x(t) + v(t)\delta t $$
+$$ v(t+\delta t) = v(t) + \sqrt{2\Gamma \delta t} + F(v(t)) \delta t $$
 
 Alternation between these two procedures simulates a single stochastic trajectory. Aggregation of many trajectories produces probability characteristics.
 
