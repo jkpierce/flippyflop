@@ -17,7 +17,7 @@ Pe = [5,0.5,0.1,0.025] # array of peclet numbers to simulate
 D = [V**2/2/kd/pe for pe in Pe] # array of velocities to simulate
 L = [3*max(np.sqrt(2*d*tmax), ke*V/(ke+kd)) for d in D] # array of domain sizes to simulate
 Gam = [d*gam**2 for d in D]
-# these domaifn sizes are set as 3x the maximum expected travel distance of a particle over the simulation time.
+# these domain sizes are set as 3x the maximum expected travel distance of a particle over the simulation time.
 
 dt = min(1/kd,1/ke,1/gam)/35 # 35 times smaller than any other timescale
 
